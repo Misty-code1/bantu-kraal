@@ -2,7 +2,7 @@ import React from "react";
 
 const Region = () => {
   return (
-    <section className="container py-5 region">
+    <section className="container py-3 region">
       <form action="#">
         <div className="col-sm-6 py-5">
          <p>Country / region</p>

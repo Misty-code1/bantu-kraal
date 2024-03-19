@@ -21,7 +21,7 @@ const NewsLetter = () => {
                 class="news-input mt-3 form-control form-control-sm"
                 placeholder="Email"
               />
-                <IoIosArrowDroprightCircle className="icon-news fs-3" />
+                {/* <IoIosArrowDroprightCircle className="icon-news fs-3" /> */}
             </div>
           </div>
         </div>

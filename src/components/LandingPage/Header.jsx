@@ -3,6 +3,7 @@ import React from "react";
 import {  Person, Search } from "react-bootstrap-icons";
 import { IoMdCart } from "react-icons/io";
 import { Link } from "react-router-dom";
+import blackLogo from "../../images/black-logo.png"
 
 const Header = () => {
   return (
@@ -21,8 +22,9 @@ const Header = () => {
         <div className="col-md text-center">
           <div class="mt-5 ps-sm-4">
             <Link className="brand-link" href="#">
-              <h1 className="text-uppercase fw-bolder">Bantu</h1>
-              <h3 className="text-uppercase fw-lightweight kraal">Kraal</h3>
+              <img src={blackLogo} alt="" />
+              {/* <h1 className="text-uppercase fw-bolder">Bantu</h1>
+              <h3 className="text-uppercase fw-lightweight kraal">Kraal</h3> */}
             </Link>
           </div>
         </div>
@@ -54,7 +56,7 @@ const Header = () => {
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav fs-6 fw-semibold px-md-5">
+            <ul class="navbar-nav fs-5 fw-semibold px-md-5">
               <li class="nav-item">
                 <Link
                   class="nav-link text-black pe-md-5"
@@ -90,7 +92,7 @@ const Header = () => {
                 </Link>
               </li>
             </ul>
-            <button class="btn btn-primary ms-auto pb-2 retailer">
+            <button class="btn btn-primary pb-2 retailer">
               Become a retailer
             </button>
           </div>

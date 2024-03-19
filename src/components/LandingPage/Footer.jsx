@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
+import whiteLogo from "../../images/white-logo.png"
 
 const Footer = () => {
   return (
@@ -9,10 +10,7 @@ const Footer = () => {
         <div className="row px-5 py-5">
           <div className="col-sm-4 mb-4 text-sm-center">
             <Link className="brand-link" to="#">
-              <p className="text-uppercase fw-bolder text-white display-3 pt-4 mb-0">Bantu</p>
-              <h3 className="fs-4 pt-0 px-0 text-uppercase fw-lightweight kraal-footer-text text-white">
-                Kraal
-              </h3>
+              <img src={whiteLogo} alt="" />
             </Link>
           </div>
           <div className="col-sm mb-2 px-0 footer-links">

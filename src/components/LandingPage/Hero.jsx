@@ -16,9 +16,11 @@ const Hero = () => {
       <div className="skew2"></div>
       <div className="skew-content text-dark">
         <h1 className="text-uppercase">Unique indoor market</h1>
-        <button className="btn fw-semibold hero-btn btn-dark">Shop by Collection</button>
-        <h4>
-          BANTU <br /> KRAAL
+        <button className="btn fw-semibold hero-btn btn-dark">
+          Shop by Collection
+        </button>
+        <h4 className="fs-3 fw-bolder mt-2">
+          BANTU <br /> <span> KRAAL</span>
         </h4>
       </div>
     </section>,
@@ -31,9 +33,11 @@ const Hero = () => {
       <div className="skew2"></div>
       <div className="skew-content text-dark">
         <h1 className="text-uppercase">Unique outdoor market</h1>
-        <button className="btn fw-semibold hero-btn btn-dark">Shop by Collection</button>
-        <h4>
-          BANTU <br /> KRAAL
+        <button className="btn fw-semibold hero-btn btn-dark">
+          Shop by Collection
+        </button>
+        <h4 className="fs-3 fw-bolder mt-2">
+          BANTU <br /> <span> KRAAL</span>
         </h4>
       </div>
     </section>,
@@ -46,12 +50,14 @@ const Hero = () => {
       <div className="skew2"></div>
       <div className="skew-content text-dark">
         <h1 className="text-uppercase">Decisive indoor market</h1>
-        <button className="btn fw-semibold hero-btn btn-dark">Shop by Collection</button>
-        <h4>
-          BANTU <br /> KRAAL
+        <button className="btn fw-semibold hero-btn btn-dark">
+          Shop by Collection
+        </button>
+        <h4 className="fs-3 fw-bolder mt-2">
+          BANTU <br /> <span> KRAAL</span>
         </h4>
       </div>
-    </section>
+    </section>,
   ];
 
   const handlePrev = () => {
