@@ -1,6 +1,7 @@
 import React from "react";
 
 import qrCode from "../../images/qrcode.png";
+import { Link } from "react-router-dom";
 
 const Vendors = () => {
   return (
@@ -15,9 +16,9 @@ const Vendors = () => {
               Beauty, Health and Wellness, and more. Our indoor market space
               offers visitors a <br /> unique shopping experience
             </p>
-            <button className="vendor-btn fw-semibold">
+            <Link to='/vendor_form' className="vendor-btn fw-semibold">
               Join Our Vendor List
-            </button>
+            </Link>
           </div>
           <div className="col-lg-4 d-none d-lg-block">
             <div className="qr-code">

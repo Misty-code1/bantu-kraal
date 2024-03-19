@@ -14,7 +14,6 @@ import ImageGrid from "../components/LandingPage/ImageGrid";
 import NeewsLetter from "../components/LandingPage/NewsLetter";
 import Footer from "../components/LandingPage/Footer";
 import Region from "../components/LandingPage/Region";
-import About from "./About";
 
 const Home = () => {
   return (
@@ -33,7 +32,6 @@ const Home = () => {
       <NeewsLetter />
       <Footer />
       <Region />
-      {/* <About /> */}
     </>
   );
 };
