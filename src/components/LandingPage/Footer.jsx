@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="row px-5 py-5">
           <div className="col-sm-4 mb-4 text-sm-center">
             <Link className="brand-link" to="#">
-              <img src={whiteLogo} alt="" />
+              <img src={whiteLogo} alt="" width="100%" />
             </Link>
           </div>
           <div className="col-sm mb-2 px-0 footer-links">
