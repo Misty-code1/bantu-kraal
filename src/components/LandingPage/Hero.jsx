@@ -90,7 +90,7 @@ const Hero = () => {
 					onClick={handlePrev}
 					className="pointer"
 				/>
-				{slides && slides.map((slide, i) => (<>{cur === i ? ( <FaDotCircle key={i} size={20} />): (<FaRegDotCircle key={i} size={20} />)}</>))}
+				{slides && slides.map((slide, i) => (<>{cur === i ? ( <FaDotCircle key={i} size={20} className="pointer" />): (<FaRegDotCircle key={i} size={20} className="pointer" />)}</>))}
 				<FaArrowAltCircleRight
 					size={20}
 					onClick={handleNext}
