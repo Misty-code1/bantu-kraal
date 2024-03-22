@@ -4,6 +4,10 @@ import { Link } from "react-router-dom";
 import whiteLogo from "../../images/white-logo.png"
 
 const Footer = () => {
+  const HandleNavigate = (e) => {
+    e.preventDefault();
+    window.location.href= '/vendor_form'
+  }
   return (
     <section className="footer py-4">
       <div className="container-fluid">
@@ -29,10 +33,10 @@ const Footer = () => {
             <p className="fs-6 text-white mb-0">Weekends</p>
           </div>
           <div className="col-sm text-sm-start">
-            <p className="fs-5 fw-semibold text-white mb-2">Become a retailer</p>
-            <button className="form-control btn-1 fw-bold fs-6 mb-4">Apply Now!</button>
+            <p className="fs-5 fw-semibold text-white mb-2" >Become a retailer</p>
+            <button className="form-control btn-1 fw-bold fs-6 mb-4" onClick={HandleNavigate}>Apply Now!</button>
             <p className="fs-5 fw-semibold text-white mb-2">Get in touch</p>
-            <button className="form-control btn-2 fw-bold fs-6">Email Us</button>
+            <button className="form-control btn-2 fw-bold fs-6" onClick={HandleNavigate}>Email Us</button>
           </div>
         </div>
       </div>

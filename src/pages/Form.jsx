@@ -5,7 +5,7 @@ import countriesData from "./data.json";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import { Link, useNavigate } from "react-router-dom";
-import Loader from "../components/Loader"
+import Loader from "../components/Loader";
 
 const Form = () => {
 	const navigate = useNavigate();
@@ -41,7 +41,7 @@ const Form = () => {
 	const [error, setError] = useState({});
 	const [countries, setCountries] = useState([]);
 	const [isChecked, setIsChecked] = useState(false);
-	const [buttonLoading, setButtonLoading] = useState(false)
+	const [buttonLoading, setButtonLoading] = useState(false);
 
 	const handleCheckboxChange = (event) => {
 		setIsChecked(event.target.checked);
@@ -141,7 +141,8 @@ const Form = () => {
 
 		if (step === 5) {
 			if (!image1 && !image2 && !image3) {
-				alert("Please upload at least one image");
+				toast.error("Please upload at least one image");
+				return false
 			}
 		}
 
@@ -156,6 +157,7 @@ const Form = () => {
 	const HandlePrevious = (e) => {
 		e.preventDefault();
 		setStep(step - 1);
+		window.scrollTo({ top: 0, behavior: 'smooth' });
 	};
 
 	const HandleNext = (e) => {
@@ -165,11 +167,12 @@ const Form = () => {
 			return;
 		} else {
 			setStep(step + 1);
+			window.scrollTo({ top: 0, behavior: 'smooth' });
 		}
 	};
 
 	const HandleSubmit = (e) => {
-		setButtonLoading(true)
+		setButtonLoading(true);
 		e.preventDefault();
 		if (isChecked) {
 			const formData = {
@@ -218,7 +221,7 @@ const Form = () => {
 					.then((response) => {
 						console.log(response);
 						if (response.status) {
-							setButtonLoading(false)
+							setButtonLoading(false);
 							toast.success(response.message);
 							setBrandName("");
 							setBrandEmail("");
@@ -243,14 +246,14 @@ const Form = () => {
 							setSelling("");
 							setStep(7);
 						} else {
-							setButtonLoading(false)
+							setButtonLoading(false);
 							toast.error(response.message);
 						}
 					});
 
 				// Form submitted successfully
 			} catch (error) {
-				setButtonLoading(false)
+				setButtonLoading(false);
 				console.error("Error submitting form:", error.message);
 				toast.error(error.message);
 			}
@@ -347,7 +350,7 @@ const Form = () => {
 	}, []);
 	return (
 		<>
-		<ToastContainer />
+			<ToastContainer />
 			<Header />
 			<hr />
 			<section className="py-5 vendor-form">
@@ -561,6 +564,7 @@ const Form = () => {
 											className="form-control"
 											onChange={(e) => HandleChange(e, setContactName)}
 											placeholder="Full Name?"
+											autoFocus
 										/>
 										<span className="text-danger error">
 											{error && error.contactName}
@@ -731,6 +735,7 @@ const Form = () => {
 											Description of Products/Services Offered{" "}
 										</label>
 										<textarea
+											autoFocus
 											rows="5"
 											className="form-control"
 											placeholder="e.g  We offer a variety of coffee beverages, including espresso, cappuccino, latte, and specialty drinks. We also serve pastries and light snacks. "
@@ -802,6 +807,7 @@ const Form = () => {
 												className="form-control is-valid"
 												value={image1}
 												readOnly
+												autoFocus
 											/>
 										) : (
 											<input
@@ -897,13 +903,16 @@ const Form = () => {
 									</div>
 									<div className="col-2"></div>
 									<div className="col-md-2 pt-4">
-										{buttonLoading ? (<Loader />) : <button
-											className="btn btn-dark form-control"
-											onClick={HandleSubmit}
-										>
-											Submit Application
-										</button>}
-										
+										{buttonLoading ? (
+											<Loader />
+										) : (
+											<button
+												className="btn btn-dark form-control"
+												onClick={HandleSubmit}
+											>
+												Submit Application
+											</button>
+										)}
 									</div>
 								</div>
 							</>
